@@ -1,0 +1,18 @@
+$TTL 3600
+
+@ IN SOA ns1.petcidadao.test. admin.petcidadao.test. (
+    2026111701 ; Serial
+    3600       ; Refresh
+    900        ; Retry
+    604800     ; Expire
+    300        ; Negative Cache TTL
+)
+
+@       IN NS ns1.petcidadao.test.
+
+@       IN A  192.168.56.10
+ns1     IN A  192.168.56.10
+node    IN A  192.168.56.10
+api     IN A  192.168.56.10
+dados   IN A  192.168.56.10
+monitor IN A  192.168.56.10

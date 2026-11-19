@@ -1,0 +1,30 @@
+[Unit]
+Description=Pet Cidadao ASP.NET Core Web API
+Requires=mssql-server.service
+Wants=network-online.target
+After=network-online.target mssql-server.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/petcidadao/publish
+ExecStart=/usr/bin/dotnet /opt/petcidadao/publish/PetCidadao.API.dll
+
+User=petcidadao
+Group=citizenops
+
+EnvironmentFile=/etc/petcidadao/petcidadao.env
+
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=60
+TimeoutStopSec=30
+KillSignal=SIGINT
+
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+
+SyslogIdentifier=petcidadao-api
+
+[Install]
+WantedBy=multi-user.target

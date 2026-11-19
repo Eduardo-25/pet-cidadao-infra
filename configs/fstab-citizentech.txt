@@ -1,0 +1,1 @@
+UUID=1c2ccee3-408c-425d-ae02-ee79a097c855 /srv/citizentech/data ext4 defaults 0 2

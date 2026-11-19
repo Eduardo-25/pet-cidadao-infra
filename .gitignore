@@ -1,0 +1,27 @@
+# Artefatos de compilacao .NET
+**/bin/
+**/obj/
+**/TestResults/
+**/publish/
+
+# Credenciais e arquivos de ambiente
+*.env
+!.env.example
+secrets/
+*.secret
+
+# Arquivos temporarios e backups
+*.tmp
+*.bak
+*.bak.*
+
+# Configuracoes locais de IDE
+.vs/
+.idea/
+*.user
+*.suo
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini

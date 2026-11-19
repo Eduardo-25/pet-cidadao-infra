@@ -1,0 +1,20 @@
+[Unit]
+Description=Pet Cidadao Infrastructure Agent
+After=local-fs.target
+RequiresMountsFor=/srv/citizentech/data
+
+[Service]
+Type=simple
+
+User=EduardoLima_RM554804
+Group=citizenops
+
+UMask=0007
+
+ExecStart=/usr/local/bin/citizentech-agent.sh
+
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
